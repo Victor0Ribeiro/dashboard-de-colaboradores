@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gerenciar Funcionários</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="sidebar">
+    <a href="dashboard.html" class="sidebar-link">Comparação de Colaboradores</a>
+    <a href="manage.html" class="sidebar-link active">Gerenciar Colaboradores</a>
+  </div>
+
+  <div class="dashboard-container">
+    <h1>Gerenciar Funcionários</h1>
+
+    <!-- Criar novo funcionário -->
+    <section>
+      <h2>Criar Novo Funcionário</h2>
+      <form id="create-form">
+        <label>Nome:
+          <input type="text" id="new-name" required>
+        </label><br>
+
+        <div id="new-skills">
+          <label>Área:
+            <input type="text" id="new-area" required>
+          </label><br>
+
+          <label>Paciência:
+            <input type="number" id="new-patience" min="0" max="10" required>
+          </label><br>
+
+          <label>Versatilidade:
+            <input type="number" id="new-versatility" min="0" max="10" required>
+          </label><br>
+
+          <label>Comunicação:
+            <input type="number" id="new-communication" min="0" max="10" required>
+          </label><br>
+        </div>
+
+        <button type="submit">Criar</button>
+      </form>
+    </section>
+
+    <hr>
+
+    <!-- Lista de funcionários -->
+    <section>
+      <h2>Funcionários Existentes</h2>
+      <table id="manage-table">
+        <thead>
+          <tr>
+            <th>Nome</th>
+            <th>Área</th>
+            <th>Paciência</th>
+            <th>Versatilidade</th>
+            <th>Comunicação</th>
+            <th>Ações</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- Preenchido pelo JS -->
+        </tbody>
+      </table>
+    </section>
+  </div>
+
+  <script src="manage.js"></script>
+</body>
+</html>
